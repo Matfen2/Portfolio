@@ -1,0 +1,47 @@
+$firstColor: azure;
+
+$firstFont: roundControl;
+$secondFont: vipnagorgialla;
+
+@font-face {
+  font-family: $firstFont;
+  src: url('../../assets/fonts/RoundControl.otf');
+}
+
+@font-face {
+  font-family: $secondFont;
+  src: url('../../assets/fonts/vipnagorgialla bd it.otf');
+}
+
+.projects {
+  padding: 40px 0;
+  text-align: center;
+
+  .nameProjects {
+    color: $firstColor;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    letter-spacing: 4px;
+    font-family: $secondFont;
+
+    @media (max-width: 768px) {
+      font-size: 1.8em;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.5em;
+    }
+  }
+
+  .listProjects {
+    padding: 5px 20px;
+    display: flex;
+    margin: 5px auto;
+    justify-content: center;
+
+    @media (max-width: 576px) {
+      margin-bottom: -20px;
+    }
+  }
+}

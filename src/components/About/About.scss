@@ -1,0 +1,161 @@
+$firstColor: azure;
+$secondColor: black;
+
+$firstFont: roundControl;
+$secondFont: vipnagorgialla;
+
+@font-face {
+  font-family: $firstFont;
+  src: url('../../assets/fonts/RoundControl.otf');
+}
+
+@font-face {
+  font-family: $secondFont;
+  src: url('../../assets/fonts/vipnagorgialla bd it.otf');
+}
+
+.about {
+  padding: 20px;
+  color: $firstColor;
+  
+  .nameAbout {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+    font-family: $secondFont;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: row;
+    margin: 30px auto;
+    align-items: center;
+    justify-content: center;
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .photo-section {
+        margin-right: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .img-fluid {
+          width: 100%;
+          max-width: 650px; 
+          margin-bottom: 15px;
+          border-radius: 10px;
+          border: 1px solid $secondColor;
+        }
+      }
+
+      .text-section {
+        padding: 10px 20px;
+        max-width: 900px;
+
+        .web, .gaming {
+          text-align: center;
+          font-size: 1.4em;
+          line-height: 1.5;
+          letter-spacing: 4px;
+          margin-bottom: 15px;
+          font-family: $firstFont;
+
+          @media (max-width: 630px) {
+            font-size: 1.2em;
+          }
+
+          @media (max-width: 544px) {
+            font-size: 1.1em;
+          }
+
+          @media (max-width: 425px) {
+            font-size: 0.9em;
+          }
+        }
+
+        .listBtnInfo {
+          display: flex;
+          gap: 40px;
+          align-items: center;
+          justify-content: center;
+          margin-top: 20px;
+
+          .btn-cv {
+            padding: 8px 16px;
+            border: 1px solid $firstColor;
+            border-radius: 5px;
+            background: transparent;
+            color: $firstColor;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-family: $secondFont;
+            transition: all ease-in 0.3ms;
+
+            &:hover {
+              background: $firstColor;
+              color: $secondColor;
+              transform: scale(1.1);
+              box-shadow: 1px 1px 13px 3px #FFFFFF;
+            }
+          }
+
+          i {
+            font-size: 1.8em;
+            color: $firstColor;
+            transition: all ease-in 0.3ms;
+
+            &:hover {
+              transform: scale(1.3);
+              text-shadow: 0 0 1px $firstColor, 0 0 6px 
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+
+      .row {
+        flex-direction: column;
+
+        .photo-section {
+          margin-right: 0;
+
+          .img-fluid {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .text-section {
+          padding: 10px;
+
+          p {
+            font-size: 1.2em;
+          }
+
+          .listBtnInfo {
+            gap: 20px;
+
+            .btn-cv {
+              font-size: 1em;
+            }
+
+            i {
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
