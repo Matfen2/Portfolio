@@ -5,8 +5,8 @@ import grimoireImage from "../assets/grimoires/grimoires.jpg";
 import grimoireOne from "../assets/grimoires/grimoiresOne.png";
 import grimoireTwo from "../assets/grimoires/grimoiresTwo.png";
 import kasaImage from "../assets/logements/logements.jpg";
-import kasaOne from "../assets/logements/logements.jpg";
-import kasaTwo from "../assets/logements/logements.jpg";
+import kasaOne from "../assets/logements/logementsOne.png";
+import kasaTwo from "../assets/logements/logementsTwo.png";
 import toolFirst from "../assets/frameworks/cssLogo.png";
 import toolSecond from "../assets/frameworks/JavascriptLogo.png";
 import toolThird from "../assets/frameworks/nodeJsLogo.png";
@@ -24,7 +24,7 @@ const projects = [
       architectTwo
     ],
     description: "Site basé sur la possibilité de choisir son plan d'architecte",
-    problem: "Rediriger vers la page d'accueil après le succès de la connexion via la technique window.location.href = index.html",
+    problem: "Difficulté : window.location.href",
     hrefSite: "https://portfolio-architecte-qw4zx0lnn-matfens-projects.vercel.app/index.html",
     hrefGithub: "https://github.com/Matfen2/Portfolio-architecte?tab=readme-ov-file#portfolio-architecte-sophie-bluel",
     firstTools: toolFirst,
@@ -39,7 +39,7 @@ const projects = [
       grimoireTwo
     ],
     description: "Site basé sur le référencement des livres et de leurs notations",
-    problem: "Optimisation et suppression des images que j'ai du résousdre avec la technique fs et sharp",
+    problem: "Difficulté : Dépendances fs et sharp",
     hrefSite: "https://mon-vieux-grimoire-eight.vercel.app",
     hrefGithub: "https://github.com/Matfen2/Mon-Vieux-Grimoire",
     firstTools: toolThird,
@@ -54,7 +54,7 @@ const projects = [
       kasaTwo
     ],
     description: "Site Kasa sur la location immobilière",
-    problem: "Animation du Collapse résolu avec la concaténation et useState",
+    problem: "Difficulté : Concaténation et useState",
     hrefSite: "https://kasa-pi-nine.vercel.app",
     hrefGithub: "https://github.com/Matfen2/Kasa",
     firstTools: toolFive,
