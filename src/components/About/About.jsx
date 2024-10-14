@@ -12,7 +12,7 @@ function About() {
           </div>
           <div className="col-lg-8 text-section">
             <p className="web">Je suis passionné par le développement front-end et le web design, étant sensibilisé à l&apos;expérience utilisateur et l&apos;accessibilité, je développe des projets centrés autour de l&apos;Humain.</p>
-            <p className="gaming">Grand passionné des jeux vidéos, je souhaite créer des sites autour de ce média.</p>
+            <p className="gaming">Motivé par les défis du secteur touristique, je souhaite mettre mes compétences au service de solutions innovantes qui améliorent l&apos;expérience des voyageurs et clients.</p>
             <div className="listBtnInfo">
             <a href="/src/assets/CV Mathieu FENOUIL.pdf" download="CV MATHIEU FENOUIL" className="btn-cv">MON CV</a>
             <a href="https://github.com/Matfen2/" target="_blank" rel="noopener noreferrer">
