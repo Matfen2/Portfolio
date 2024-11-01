@@ -13,7 +13,6 @@ function Projects() {
               title={project.title}
               cover={project.imgShow}
               description={project.description}
-              problem={project.problem}
               pictures={project.pictures}
               hrefSite={project.hrefSite}      
               hrefGithub={project.hrefGithub} 

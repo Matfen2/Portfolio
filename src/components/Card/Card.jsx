@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import '../Card/Card.scss';
 
-function Card({ title, cover, description, problem, pictures, hrefSite, hrefGithub, tools }) {
+function Card({ title, cover, description, pictures, hrefSite, hrefGithub, tools }) {
   const [isHovered, setIsHovered] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
@@ -49,7 +49,6 @@ function Card({ title, cover, description, problem, pictures, hrefSite, hrefGith
             </Swiper>
 
             <p className='description'>{description}</p>
-            <p className='problem'>{problem}</p>
             <div className="modal-tools d-flex mt-4">
               <div className='row'>
                 <div className='col-lg-6 listHref'>

@@ -1,16 +1,14 @@
 import architectImage from "../assets/architecte/architectes.jpg";
 import architectOne from "../assets/architecte/architecteOne.png";
 import architectTwo from "../assets/architecte/architecteTwo.png";
-import grimoireImage from "../assets/grimoires/grimoires.jpg";
-import grimoireOne from "../assets/grimoires/grimoiresOne.png";
-import grimoireTwo from "../assets/grimoires/grimoiresTwo.png";
+import arkaneImage from "../assets/arkane/logoArkane.png";
+import arkaneOne from "../assets/arkane/arkaneOne.png";
+import arkaneTwo from "../assets/arkane/arkaneTwo.png";
 import kasaImage from "../assets/logements/logements.jpg";
 import kasaOne from "../assets/logements/logementsOne.png";
 import kasaTwo from "../assets/logements/logementsTwo.png";
 import toolFirst from "../assets/frameworks/cssLogo.png";
 import toolSecond from "../assets/frameworks/JavascriptLogo.png";
-import toolThird from "../assets/frameworks/nodeJsLogo.png";
-import toolFour from "../assets/frameworks/mongoDbLogo.png";
 import toolFive from "../assets/frameworks/reactJsLogo.png";
 import toolSix from "../assets/frameworks/sassLogo.png";
 
@@ -24,7 +22,6 @@ const projects = [
       architectTwo
     ],
     description: "Site basé sur la possibilité de choisir son plan d'architecte",
-    problem: "Difficulté : window.location.href",
     hrefSite: "https://portfolio-architecte-qw4zx0lnn-matfens-projects.vercel.app/index.html",
     hrefGithub: "https://github.com/Matfen2/Portfolio-architecte?tab=readme-ov-file#portfolio-architecte-sophie-bluel",
     firstTools: toolFirst,
@@ -32,18 +29,17 @@ const projects = [
   },
   {
     id: 2,
-    title: "Mon Vieux Grimoire",
-    imgShow: grimoireImage,
+    title: "Arkane Studio",
+    imgShow: arkaneImage,
     pictures: [
-      grimoireOne,
-      grimoireTwo
+      arkaneOne,
+      arkaneTwo
     ],
-    description: "Site basé sur le référencement des livres et de leurs notations",
-    problem: "Difficulté : Dépendances fs et sharp",
-    hrefSite: "https://mon-vieux-grimoire-eight.vercel.app",
-    hrefGithub: "https://github.com/Matfen2/Mon-Vieux-Grimoire",
-    firstTools: toolThird,
-    secondTools: toolFour
+    description: "Clone du site Arkane Studio",
+    hrefSite: "https://arkane-studios.vercel.app",
+    hrefGithub: "https://github.com/Matfen2/arkane-studios",
+    firstTools: toolFive,
+    secondTools: toolSix
   },
   {
     id: 3,
