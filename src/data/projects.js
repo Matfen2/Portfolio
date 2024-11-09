@@ -1,29 +1,29 @@
-import architectImage from "../assets/architecte/architectes.jpg";
-import architectOne from "../assets/architecte/architecteOne.png";
-import architectTwo from "../assets/architecte/architecteTwo.png";
+import logementImage from "../assets/logements/logements.jpg";
+import logementOne from "../assets/logements/logementsOne.png";
+import logementTwo from "../assets/logements/logementsTwo.png";
 import arkaneImage from "../assets/arkane/logoArkane.png";
 import arkaneOne from "../assets/arkane/arkaneOne.png";
 import arkaneTwo from "../assets/arkane/arkaneTwo.png";
-import kasaImage from "../assets/logements/logements.jpg";
-import kasaOne from "../assets/logements/logementsOne.png";
-import kasaTwo from "../assets/logements/logementsTwo.png";
-import toolFirst from "../assets/frameworks/cssLogo.png";
-import toolSecond from "../assets/frameworks/JavascriptLogo.png";
-import toolFive from "../assets/frameworks/reactJsLogo.png";
-import toolSix from "../assets/frameworks/sassLogo.png";
+import dishonoredImage from '../assets/dishonored/dishonoredLogo.png';
+import dishonoredOne from '../assets/dishonored/dishonoredOne.png';
+import dishonoredTwo from '../assets/dishonored/dishonoredTwo.png';
+import toolFirst from "../assets/frameworks/reactJsLogo.png";
+import toolSecond from "../assets/frameworks/sassLogo.png";
+import toolThird from "../assets/frameworks/nextjsLogo.png";
+import toolFour from "../assets/frameworks/tailwindCSSLogo.png";
 
 const projects = [
   {
     id: 1,
-    title: "Portfolio-Architecte",
-    imgShow: architectImage,
+    title: "Kasa",
+    imgShow: logementImage,
     pictures: [
-      architectOne,
-      architectTwo
+      logementOne,
+      logementTwo
     ],
-    description: "Site basé sur la possibilité de choisir son plan d'architecte",
-    hrefSite: "https://portfolio-architecte-qw4zx0lnn-matfens-projects.vercel.app/index.html",
-    hrefGithub: "https://github.com/Matfen2/Portfolio-architecte?tab=readme-ov-file#portfolio-architecte-sophie-bluel",
+    description: "Site basé sur le logement",
+    hrefSite: "https://kasa-pi-nine.vercel.app",
+    hrefGithub: "https://github.com/Matfen2/Kasa",
     firstTools: toolFirst,
     secondTools: toolSecond
   },
@@ -38,23 +38,22 @@ const projects = [
     description: "Clone du site Arkane Studio",
     hrefSite: "https://arkane-studios.vercel.app",
     hrefGithub: "https://github.com/Matfen2/arkane-studios",
-    firstTools: toolFive,
-    secondTools: toolSix
+    firstTools: toolFirst,
+    secondTools: toolSecond
   },
   {
     id: 3,
-    title: "Kasa",
-    imgShow: kasaImage,
+    title: "Dishonored",
+    imgShow: dishonoredImage,
     pictures: [
-      kasaOne,
-      kasaTwo
+      dishonoredOne,
+      dishonoredTwo
     ],
-    description: "Site Kasa sur la location immobilière",
-    problem: "Difficulté : Concaténation et useState",
-    hrefSite: "https://kasa-pi-nine.vercel.app",
-    hrefGithub: "https://github.com/Matfen2/Kasa",
-    firstTools: toolFive,
-    secondTools: toolSix
+    description: "Site basé sur la saga Dishonored",
+    hrefSite: "https://dishonored.vercel.app",
+    hrefGithub: "https://github.com/Matfen2/dishonored",
+    firstTools: toolThird,
+    secondTools: toolFour
   }
 ];
 
