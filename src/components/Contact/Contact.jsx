@@ -20,6 +20,9 @@ function Contact() {
           <a href="https://www.linkedin.com/in/mathieu-fenouil-5884a8193/" target="_blank" rel="noreferrer">
             <i className="fa-brands fa-linkedin"></i>
           </a>
+          <a href="https://github.com/Matfen2/" target="_blank" rel="noopener noreferrer">
+            <i className="fa-brands fa-github"></i>
+          </a>
         </div>
       </div>
       <footer className="footer">
