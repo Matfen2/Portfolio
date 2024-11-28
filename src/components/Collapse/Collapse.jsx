@@ -2,7 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Collapse.scss';
 
-function Collapse({ icon, capacitie, details, listCapacities }) {
+function Collapse({ title, description, pict, synopsis, hrefSite, hrefGithub }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,34 +11,49 @@ function Collapse({ icon, capacitie, details, listCapacities }) {
   };
 
   return (
-    <div 
-      className={`capacitie-card ${isHovered ? 'hovered' : ''} ${isOpen ? 'open' : ''}`} 
-      onMouseEnter={() => setIsHovered(true)} 
-      onMouseLeave={() => setIsHovered(false)} 
+    <div
+      className={`project-card ${isHovered ? 'hovered' : ''} ${isOpen ? 'open' : ''}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       onClick={toggleCollapse}
     >
-      <div className="capacitie-header">
-        <div className="icon" dangerouslySetInnerHTML={{ __html: icon }} />
-        <p className="capacitie-title">{capacitie}</p>
-        <p className={`capacitie-details ${isHovered ? 'show' : ''}`}>{details}</p>
-        <i className={`chevron-icon fa-solid fa-chevron-down ${isOpen ? 'open' : ''}`}></i>
+      <div className="project-header">
+        {/* Image */}
+        <img src={pict} alt={title} className="project-image" />
+        {/* Title */}
+        <h3 className="project-title">{title}</h3>
+        {/* Description */}
+        <p className="project-description">{description}</p>
       </div>
-      <div className={`collapse-content ${isOpen ? 'open' : ''}`}>
-        <ul className="listCapacities">
-          {listCapacities.map((capacity, index) => (
-            <li key={index}>{capacity}</li>
-          ))}
-        </ul>
-      </div>
+      {/* Expanded content */}
+      {isOpen && (
+        <div className="project-details">
+          <p className="synopsis">{synopsis}</p>
+          <div className="project-buttons">
+            {hrefSite && (
+              <a href={hrefSite} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                Voir le site
+              </a>
+            )}
+            {hrefGithub && (
+              <a href={hrefGithub} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+                Voir le code
+              </a>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
 Collapse.propTypes = {
-  icon: PropTypes.string.isRequired,
-  capacitie: PropTypes.string.isRequired,
-  details: PropTypes.string.isRequired,
-  listCapacities: PropTypes.arrayOf(PropTypes.string).isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  pict: PropTypes.string.isRequired,
+  synopsis: PropTypes.string,
+  hrefSite: PropTypes.string,
+  hrefGithub: PropTypes.string,
 };
 
 export default Collapse;
