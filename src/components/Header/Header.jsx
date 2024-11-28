@@ -1,74 +1,39 @@
-import "../Header/Header.scss";
-import Offcanvas from "../Offcanvas/Offcanvas";
-import { useState, useEffect } from "react";
+"use client";
 
-function Header() {
+import { useState, useEffect } from "react";
+import "../Header/Header.scss"; // Importation des styles SASS
+
+const Header = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
+    setScrolled(window.scrollY > 50); // Définit l'état lorsque l'utilisateur défile
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ behavior: "smooth" }); // Défilement fluide vers une section
     }
   };
 
   return (
-    <>
-      <header className={`header ${scrolled ? "scrolled" : ""}`}>
-        <nav className="navbar">
-          <ul className="navbar-nav">
-            <li>
-              <button className="active-link" onClick={() => scrollToSection('about-section')} aria-label="À propos de moi">
-                A PROPOS DE MOI
-              </button>
-            </li>
-            <li>
-              <button className="active-link" onClick={() => scrollToSection('projects-section')} aria-label="Projets">
-                PROJETS
-              </button>
-            </li>
-            <li>
-              <button className="active-link" onClick={() => scrollToSection('capacities-section')} aria-label="Capacités">
-                CAPACITES
-              </button>
-            </li>
-            <li>
-              <button className="active-link" onClick={() => scrollToSection('contact-section')} aria-label="Contact">
-                CONTACT
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <button 
-          className="btnCanvas" 
-          type="button" 
-          data-bs-toggle="offcanvas" 
-          data-bs-target="#offcanvasNavbar" 
-          aria-controls="offcanvasNavbar"
-          aria-label="Menu"
-        >
-          <i className="fa-solid fa-bars"></i>
-      </button>
-
-      <Offcanvas scrollToSection={scrollToSection} />
-    </>
+    <header className={scrolled ? "scrolled" : ""}>
+      <nav>
+        <ul>
+          <li className={scrolled ? "scrolled" : ""} onClick={() => scrollToSection("about-section")}>A PROPOS DE MOI</li>
+          <li className={scrolled ? "scrolled" : ""} onClick={() => scrollToSection("capacities-section")}>CAPACITES</li>
+          <li className={scrolled ? "scrolled" : ""} onClick={() => scrollToSection("projects-section")}>PROJETS</li>
+          <li className={scrolled ? "scrolled" : ""} onClick={() => scrollToSection("contact-section")}>CONTACT</li>
+        </ul>
+      </nav>
+    </header>
   );
-}
+};
 
 export default Header;

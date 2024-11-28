@@ -1,5 +1,5 @@
-$firstColor: azure;
-$secondColor: black;
+$firstColor: #205D9E;
+$secondColor: #C2E6FF;
 
 $firstFont: roundControl;
 $secondFont: vipnagorgialla;
@@ -16,7 +16,7 @@ $secondFont: vipnagorgialla;
 
 .about {
   padding: 20px;
-  color: $firstColor;
+  color: $secondColor;
   
   .nameAbout {
     font-size: 2.2em;
@@ -46,10 +46,12 @@ $secondFont: vipnagorgialla;
 
         .img-fluid {
           width: 100%;
-          max-width: 870px; 
+          height: 450px;
+          object-fit: cover;
+          border-radius: 50%;
+          max-width: 400px; 
           margin-bottom: 15px;
-          border-radius: 10px;
-          border: 1px solid $secondColor;
+          border: 2px solid $firstColor;
         }
       }
 
@@ -79,7 +81,7 @@ $secondFont: vipnagorgialla;
         }
         i {
           font-size: 1.8em;
-          color: $firstColor;
+          color: $secondColor;
           transition: all ease-in 0.3ms;
 
           &:hover {

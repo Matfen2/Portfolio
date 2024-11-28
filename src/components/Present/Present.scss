@@ -1,5 +1,5 @@
-$firstColor: #FFFFFF;
-$secondColor: black;
+$firstColor: #C2E6FF;
+$secondColor: #205D9E;
 
 $firstFont: roundControl;
 $secondFont: vipnagorgialla;
@@ -20,7 +20,7 @@ $secondFont: vipnagorgialla;
   margin: 170px auto;
 
   .name {
-    font-size: 4.4em;
+    font-size: 3.6em;
     letter-spacing: 4px;
     font-family: $secondFont;
     
@@ -91,14 +91,14 @@ $secondFont: vipnagorgialla;
 
   #btnCV {
     padding: 6px 12px;
-    border: 1px solid $firstColor;
-    border-radius: 5px;
+    border: 2px solid $secondColor;
+    border-radius: 15px;
     background: transparent;
     color: $firstColor;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-family: $secondFont;
-    transition: all ease-in 0.3ms;
+    transition: all 0.1s ease-in;
 
     a {
       color: $firstColor;
@@ -106,7 +106,7 @@ $secondFont: vipnagorgialla;
     }
 
     &:hover {
-      color: $secondColor;
+      color: $firstColor;
       transform: scale(1.1);
     }
   }
